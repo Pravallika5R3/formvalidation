@@ -6,12 +6,10 @@
     
     /* Primary Color Variables */
     --main: #042036;
-    /*--main-light: #031511; /* Approximate lightened value */
     --main-dark: #0c474c; /* Approximate darkened value */
     
     /* Grayscale Variables */
     --gray-light: #bdc2c2;
-    /*--gray: #fef9f9;
   
     /* Font Weight Variables */
     --thin: 300;

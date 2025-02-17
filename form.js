@@ -67,8 +67,6 @@ function submitValidation() {
   var password = document.getElementById('signup-password').value;
   var cpassword = document.getElementById('signup-confirm-password').value;
 
-
-
   if (phn.length > 10) {
     alert("phn number must not exceed 10-digits");
     return false;
@@ -77,7 +75,6 @@ function submitValidation() {
   } else {
     true;
   }
-
 
   if (password == "" || password !== cpassword) {
     alert("confirm password not match");
@@ -90,7 +87,6 @@ function submitValidation() {
   else {
     alert("Your details were successfully received!!")
     return true;
-
   }
 
 }
