@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
   showSignup();
 
 });
+
+// validation criterias in onchange funtions
 function validationEvent() {
   let username = document.getElementById('signup-name').value;
   var format = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
@@ -62,6 +64,8 @@ function validationEvent() {
     }
   }
 }
+
+// validation criterias in onsubmit funtions
 function submitValidation() {
   var phn = document.getElementById('signup-phn').value;
   var password = document.getElementById('signup-password').value;
