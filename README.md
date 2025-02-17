@@ -14,6 +14,6 @@ Whenever any of the above are not met, the error pop saying ex; “enter correct
 *	JavaScript( Event listeners(onSubmit and onChange), multiple functions, loops,
 if/else )
 *	Use comments wherever possible to make it readable for others.
-##Output is as follows:
+## Output is as follows:
 ![Screenshot 2025-02-17 195115](https://github.com/user-attachments/assets/96734c44-68b1-4a4f-bb83-27ab44fdd00d)
 ![Screenshot 2025-02-17 195207](https://github.com/user-attachments/assets/2258f51a-7655-4c65-ac0c-bee9d464a230)
