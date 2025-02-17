@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css"> <!-- Link to your CSS -->
+    <script src="form.js" defer></script><!-- Link to your JavaScript -->
+    <title>Sign Up / Log In Form</title>
+</head>
+<body>
+
+<div class="form">
+    <h1>Welcome to Website</h1>
+    <ul class="tab-group">
+        <li class="active"><a href="#" id="signup-tab">Sign Up</a></li>
+        <li><a href="#" id="login-tab">Log In</a></li>
+    </ul>
+
+    <div id="signup">
+        <!--onsubmit validation on form tag-->
+        <form onsubmit="return submitValidation()" >
+        
+            <div class="field-wrap">
+                <label for="signup-name">Name:</label>
+                <!--onchange validation on input tag-->
+                <input type="text" id="signup-name" onchange="return validationEvent()">
+                <span id="info"></span>
+            </div>
+
+            <div class="field-wrap">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" >
+            </div>
+
+            <div class="field-wrap">
+                <label for="signup-phn">Phone No:</label>
+                <input type="phn" id="signup-phn" required>
+                <span id="phninfo"></span>
+            </div>
+
+            <div class="field-wrap">
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="weak password,must contain at least 8 characters ,one number,uppercase and lowercase letter"required>
+            </div>
+
+            <div class="field-wrap">
+                <label for="signup-confirm-password">Confirm Password:</label>
+                <input type="password" id="signup-confirm-password" required>
+            </div>
+
+            <button type="submit" class="button button-block">Submit</button>
+        </form>
+    </div>
+
+        
+    <div id="login">
+        <form>
+            <div class="field-wrap">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" required>
+            </div>
+            <div class="field-wrap">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" required>
+            </div>
+            <button type="submit" class="button button-block">Log In</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

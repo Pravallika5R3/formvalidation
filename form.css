@@ -1,0 +1,217 @@
+/* Color Variables */
+:root {
+    --body-bg: #d5cdd4; /* Background color for the body */
+    --form-bg: rgba(6, 89, 85, 0.89); /* Background color for the form with opacity */
+    --white: #f4eded; /* Standard white color */
+    
+    /* Primary Color Variables */
+    --main: #042036;
+    /*--main-light: #031511; /* Approximate lightened value */
+    --main-dark: #0c474c; /* Approximate darkened value */
+    
+    /* Grayscale Variables */
+    --gray-light: #bdc2c2;
+    /*--gray: #fef9f9;
+  
+    /* Font Weight Variables */
+    --thin: 300;
+    --bold: 600;
+    --border-radius: 4px;
+}
+
+/* Global Reset and Box Sizing */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll; /* Ensuring scroll is always visible for consistent layout */
+}
+
+/* Body Styling */
+body {
+    background: var(--body-bg);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: var(--main);
+    transition: 0.5s ease;
+}
+
+a:hover {
+    color: var(--main-dark);
+}
+
+/* Main Form Container Styling */
+.form {
+    background: var(--form-bg);
+    padding: 40px;
+    max-width: 600px;
+    margin: 180px auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px 4px rgba(37, 74, 102, 0.3);
+}
+
+/* Tab Navigation Styling */
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+}
+
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tab-group li a {
+    display: block;
+    padding: 15px;
+    background: rgba(160, 179, 176, 0.25);
+    color: var(--gray-light);
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.tab-group li a:hover {
+    background: var(--main-dark);
+    color: var(--white);
+}
+
+.tab-group .active a {
+    background: var(--main);
+    color: var(--white);
+}
+
+/* Hide both signup and login sections initially */
+#signup, #login {
+    display: none;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: var(--white);
+    font-weight: var(--thin);
+    margin: 0 0 40px;
+}
+
+/* Label Styling */
+label {
+    position: absolute;
+    transform: translateY(6px);
+    left: 12px;
+    color: rgba(161, 159, 159, 0.5);
+    transition: all 0.25s ease;
+    pointer-events: none;
+    font-size: 22px;
+}
+
+label .req {
+    margin: 2px;
+    color: var(--main);
+}
+
+/* Active Label Styling */
+label.active {
+    transform: translateY(50px);
+    left: 2px;
+    font-size: 14px;
+}
+
+label.active .req {
+    opacity: 0;
+}
+
+label.highlight {
+    color: var(--white);
+}
+
+/* Input and Textarea Styling */
+input, textarea {
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    background: none;
+    border: 1px solid var(--gray-light);
+    color: var(--white);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus, textarea:focus {
+    outline: 0;
+    border-color: var(--main);
+}
+
+/* Textarea Specific Styling */
+textarea {
+    border: 2px solid var(--gray-light);
+    resize: vertical;
+}
+
+/* Field Container Styling */
+.field-wrap {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+/* Row Layout for Name Fields */
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.top-row > div:last-child {
+    margin-right: 0;
+}
+
+/* Button Styling */
+.button {
+    border: none;
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: var(--bold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--main);
+    color: var(--white);
+    transition: all 0.5s ease;
+    appearance: none;
+}
+
+.button:hover, .button:focus {
+    background: var(--main-dark);
+}
+
+/* Block Style for Button */
+.button-block {
+    display: block;
+    width: 100%;
+}
+
+/* Forgot Password Link Styling */
+.forgot {
+    margin-top: -20px;
+    text-align: right;
+}
+
+/* Ensure the Signup form is displayed by default */
+#signup {
+    display: block; /* Show Sign Up by default */
+}
